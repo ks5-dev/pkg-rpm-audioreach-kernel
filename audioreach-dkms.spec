@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           audioreach-dkms
-Version:        1.1.0
-Release:        2%{?dist}
+Version:        1.1.2
+Release:        1%{?dist}
 Summary:        AudioReach out-of-tree Linux kernel drivers
 
 License:        GPL-2.0-only
@@ -108,6 +108,11 @@ dkms remove %{name}/%{version} --all --rpm_safe_upgrade || true
 %{_includedir}/dsp/msm_audio_mem.h
 
 %changelog
+* Tue Oct 27 2026 Febin Francis <ffrancis@qti.qualcomm.com> - 1.1.2-1
+- Update to 1.1.2
+- Add CMA memory backend driver
+- Add Shikra, NORD RIDE and Hawi machine driver support
+
 * Thu Sep 25 2026 Chiluka Rohith <rchiluka@qti.qualcomm.com> - 1.1.0-2
 - Rename headers subpackage from audioreach-dkms-dev to
   audioreach-linux-devel for CentOS naming convention and to
